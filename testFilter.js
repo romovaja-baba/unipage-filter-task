@@ -19,18 +19,21 @@ const expectedCourses1 = [
     { name: 'Courses in England', prices: [0, 100] },
     { name: 'Courses in Italy', prices: [100, 200] }
 ];
-
 const expectedCourses2 = [
     { name: 'Courses in Italy', prices: [100, 200] }
 ];
-
 const expectedCourses3 = [
     { name: 'Courses in Germany', prices: [500, null] },
     { name: 'Courses in USA', prices: [200, null] }
 ];
-
 export const isEqual = (actual, expected) => {
-    return actual.toString() === expected.toString();
+    let result = true;
+    expected.forEach((item, index) => {
+        if (item.name !== actual[index].name) {
+            result = false;
+        };
+    });
+    return result;
 }
 
 console.log(isEqual(arrayFilter(courses, requiredRange1), expectedCourses1));

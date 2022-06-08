@@ -2,9 +2,9 @@ import { compareCourses } from "./sort.js";
 import { isEqual, courses } from "./testFilter.js";
 
 const expectedSort = [
-    { name: 'Courses in England', prices: [0, 100] },
-    { name: 'Courses in Russia', prices: [null, 400] },
     { name: 'Courses in France', prices: [null, null] },
+    { name: 'Courses in Russia', prices: [null, 400] },
+    { name: 'Courses in England', prices: [0, 100] },
     { name: 'Courses in China', prices: [50, 250] },
     { name: 'Courses in Kazakhstan', prices: [56, 324] },
     { name: 'Courses in Italy', prices: [100, 200] },
